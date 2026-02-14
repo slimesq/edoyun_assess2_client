@@ -2,10 +2,10 @@
 
 #include <QApplication>
 #include <QLocale>
+#include <QNetworkProxy>
 #include <QTranslator>
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
 
     QTranslator translator;
@@ -17,6 +17,9 @@ int main(int argc, char *argv[])
             break;
         }
     }
+
+    // 核心修改：禁用QT所有网络代理
+    QNetworkProxy::setApplicationProxy(QNetworkProxy::NoProxy);
 
     MainWindow w;
     w.show();

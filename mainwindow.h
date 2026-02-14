@@ -3,11 +3,14 @@
 
 #include <QMainWindow>
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
 }
 QT_END_NAMESPACE
+
+class QTcpSocket;
 
 class MainWindow : public QMainWindow
 {
@@ -17,10 +20,15 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void addMyMessage(const QString & text);
+    void addServerMessage(const QString& text);
+
 private slots:
     void onLoginClicked();
+    void onSendBtnClicked();
 
 private:
     Ui::MainWindow *ui;
+    QTcpSocket* socket;
 };
 #endif // MAINWINDOW_H

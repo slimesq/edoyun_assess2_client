@@ -18,7 +18,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="loginPage">
        <property name="enabled">
@@ -58,7 +58,46 @@
         </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="homePage"/>
+      <widget class="QWidget" name="homePage">
+       <widget class="QTextEdit" name="inputEdit">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>420</y>
+          <width>611</width>
+          <height>121</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="sendButton">
+        <property name="geometry">
+         <rect>
+          <x>510</x>
+          <y>540</y>
+          <width>101</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>发送</string>
+        </property>
+       </widget>
+       <widget class="QListWidget" name="chatWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>611</width>
+          <height>421</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
      </widget>
     </item>
    </layout>
